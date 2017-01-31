@@ -122,15 +122,15 @@ justify-content: center;
 }
 .content_video h1 {
 	color: #fff;
-	margin:0.6em;
+	margin:2em;
 }
 .content_video h2 {
-	margin:0.6em;
+	margin:2em;
 	color: #fff;
 }
 .content_video a {
 	color: #fff;
-	margin:1em;
+	margin:2em;
 	text-decoration: none;
 	background: rgba(71, 87, 173, 0.38);
 
@@ -141,12 +141,6 @@ justify-content: center;
 	
 
 }
-/*a[class^="section_"]{
- display:flex;
-}*/
-/*div .section_video{
-	flex-direction: column;
-	align-content: center;
-}*/
+
 /*twa-lg, twa-2x, twa-3x, twa-4x and twa-5x.
  http://www.webpagefx.com/tools/emoji-cheat-sheet/*/
