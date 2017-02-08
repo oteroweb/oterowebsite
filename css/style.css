@@ -122,16 +122,23 @@ header nav{
 	display: flex;
 }
 
+
+header nav ul{
+	display: flex;
+}
+#mainmenuitem{ padding: 2vh;  } 
+.hvr-shutter-out-horizontal{background: rgba(39, 122, 151, 0.07);}
+
 header nav li{
-	margin: 0 15px;
+	/*margin: 0 15px;*/
 }
 
 header nav li:first-child{
-	margin-left: 0;	
+	/*margin-left: 0;	*/
 }
 
 header nav li:last-child{
-	margin-right: 0;	
+	/*margin-right: 0;	*/
 }
 
 
