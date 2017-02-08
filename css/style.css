@@ -100,17 +100,19 @@ ul.grid{
 -------------*/
 
 header{
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 10;
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	color: #fff;
-	padding: 35px 100px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    background: rgba(39, 122, 151, 0.17);
+    height: 10vh;
 }
+
 
 header h2{
 	font-family: 'Quicksand', sans-serif;
