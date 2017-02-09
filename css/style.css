@@ -173,6 +173,23 @@ color:black;
 	    color: black;
 	    text-align: center;
 }
+
+.contactfields{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.contacts{
+	 display: flex; 
+	flex-direction: row;
+	justify-content: space-between;
+}
+.contacts  a{
+	 border-radius: 50%;
+}
+.contacts a:hover{
+	 border-radius: 50%;
+}
 /*----------------
  	Hero Section
 ----------------*/
@@ -500,3 +517,58 @@ justify-content: space-between;
 }*/
 /*twa-lg, twa-2x, twa-3x, twa-4x and twa-5x.
  http://www.webpagefx.com/tools/emoji-cheat-sheet/
+
+
+ /*tool tip */
+ /* Tooltip container */
+.hoverdisplay{
+	display:none;
+}
+.hoverdisplay:hover{
+	display:flex !important;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
