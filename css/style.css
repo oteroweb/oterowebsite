@@ -123,7 +123,7 @@ header nav{
 }
 
 
-header nav ul{
+header > nav > ul{
 	display: flex;
 }
 #mainmenuitem{ padding: 2vh;  } 
@@ -141,7 +141,13 @@ header nav li:last-child{
 	/*margin-right: 0;	*/
 }
 
-
+#header.headroom.headroom--not-bottom.headroom--not-top.headroom--unpinned{
+position: 	fixed;	
+background:white;
+color:black;
+}
+#header.headroom.headroom--not-bottom.headroom--not-top.headroom--unpinned > h2 {color:black; }
+#header.headroom.headroom--not-bottom.headroom--not-top.headroom--unpinned > nav {color:black; }
 
 @media (max-width: 1000px){
 	header{
@@ -161,7 +167,12 @@ header nav li:last-child{
 }
 
 
-
+.titlesection{
+	    padding: 2em;
+	    font-size: 2em;
+	    color: black;
+	    text-align: center;
+}
 /*----------------
  	Hero Section
 ----------------*/
