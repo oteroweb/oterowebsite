@@ -1,78 +1,95 @@
-@CHARSET "ISO-8859-1";
-/* Reset CSS
- * --------------------------------------- */
+*{ 	margin: 0; 	padding: 0; 	box-sizing: border-box; }
+html {    font-size: calc(100vw / 30);}
+body{display: flex; flex-direction: column;}
+ul, nav{list-style: none;}
+a{text-decoration: none;color: inherit;cursor: pointer;opacity: 0.9;}
+a:hover{opacity: 1;}
+a.btn{color: #fff;border-radius: 4px;text-transform: uppercase;	background-color: #2196F3;
+	font-weight: 800;	text-align: center;}
+hr{width: 150px;height: 2px;background-color: #2196F3;border: 0;margin-bottom: 80px;}
+/*img{max-width: 100%;}*/
+/*aqui iba reset*/
 
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
-form,fieldset,input,textarea,p,blockquote,th,td {
-    padding: 0;    margin: 0;
-}
-a{
-	text-decoration:none;
-}
-table {
-    border-spacing: 0;
-}
-fieldset,img {
-    border: 0;
-}
-address,caption,cite,code,dfn,em,strong,th,var {
-    font-weight: normal;
-    font-style: normal;
-}
-strong{
-	font-weight: bold;
-}
-ol,ul {
-    list-style: none;
-    margin:0;
-    padding:0;
-}
-caption,th {
-    text-align: left;
+    /*==========  Mobile First Method  ==========*/ /* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+		header{
+			position:fixed; display: flex;	
+			flex-direction: column;
+		    justify-content: space-between;
+			top:0; max-height: 20vh;
+			z-index: 70; width: 100%;
+			padding: 0; margin:0;
+		}
+		/*#2098d1*/
+		header > div{display: flex;     flex-direction: row;}
+		#header > div > img:nth-child(1){width: 25%}
+		#header > div > img:nth-child(2){width: 75%}
+		#btn-menu{display: flex;}
+		header nav{ flex-direction: row;  }
+		header nav ul {display: inline-flex; min-width: 100%; 
+			justify-content: space-around; color:white; }
+		.hvr-shutter-out-horizontal {
+		background: rgba(32, 152, 209, 0.26);
+		display: flex;    flex-direction: column; 
+		}
+		header nav ul li { 		 }
+		header nav ul li a { margin: 0.2rem; border-radius:50px; 
+			 
+		}
+		header nav ul li a i {display:flex; margin:0.4rem;}
 
-}
-h1,h2,h3,h4,h5,h6 {
-    font-weight: normal;
-    font-size: 100%;
-    margin:0;
-    padding:0;
-    color:#444;
-}
-q:before,q:after {
-    content:'';
-}
-abbr,acronym { border: 0;
-}
+    }
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+
+    }
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+
+    }
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+
+    }
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+
+    }
+    /*==========  Non-Mobile First Method  Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+
+    }
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+
+    }
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+
+    }
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+
+    }
+    /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+        
+    }
+    @media screen and (max-width: 700px){
+    	header .menu{flex-direction: row;}
+    	header .menu .logo {display: flex; flex-direction: row;justify-content: space-between;width: 100%;padding: 1em;}
+    	header .menu .logo .btn-menu {display: inline-block;}
+    	header .menu .enlaces{width: 100%;display: flex; flex-direction: row;flex-wrap: wrap;justify-content: space-between;}
+    }
 
 
-/* Custom CSS
- * --------------------------------------- */
-body{
-	font-family: arial,helvetica;
-	color: #333;
-	color: rgba(0,0,0,0.5);
-}
-.wrap{
-	margin-left: auto;
-	margin-right: auto;
-	width: 960px;
-	position: relative;
-}
-h1{
-	font-size: 6em;
-}
-p{
-	font-size: 2em;
-}
-.intro p{
-	width: 50%;
-	margin: 0 auto;
-	font-size: 1.5em;
-}
-.section{
-	text-align:center;
-}
 
+
+
+
+
+
+/*
 
 
 header #menu li {
@@ -117,44 +134,25 @@ header #menu li {
 #menu li.active a{
 	color: #fff;
 }
-header{
-	position:fixed;
-	display: flex;	
-    justify-content: space-between;
-	top:0;
-	height: 40px;
-	z-index: 70;
-	width: 100%;
-	padding: 0;
-	margin:0;
-}
 
 
+*/
 
 /*for video*/
 
 	#myVideo{
-		position: absolute;
-		
-		right: 0;
-		bottom: 0;
-		top:0;
-		right:0;
-		min-width: 100%;
-		height: 100%;
-		background-size: 100% 100%;
- 		background-color: black;
-		/*
-		*/
-  		background-image: /* our video */;
+		position: absolute; right: 0; bottom: 0;
+		top:0; 	right:0; 	min-width: 100%;
+		height: 100%; 	background-size: 100% 100%;
+ 		background-color: black; background-image: /* our video */;
   		background-position: center center;
-  		background-size: contain;
-   		object-fit: cover; /*cover video background */
+  		background-size: contain; object-fit: cover; /*cover video background */
    		z-index:-1;
 	}
+	/*
+	
 	#section0 .layer{
 		position: absolute;
-		/*z-index: 4;*/
 		width: 100%;
 		left: 0;
 		top: 43%;
@@ -162,17 +160,101 @@ header{
 		-ms-transform: translate3d(0,0,0);
 		transform: translate3d(0,0,0);
 	}
-	video::-webkit-media-controls {
-	  display:none !important;
-	}
-
-	#section1 .layer{
-		z-index: 5;
-
-}
-
+	video::-webkit-media-controls {  display:none !important;	}
+	#section1 .layer{	z-index: 5;}
+	 */
+/*
 .fp-section.fp-table, .fp-slide.fp-table {
     display: table;
     table-layout: fixed;
     min-height: 100vh !important;
 }
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;    margin: 0;
+}
+a{
+	text-decoration:none;
+}
+table {
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+
+strong{
+	font-weight: bold;
+}
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+caption,th {
+    text-align: left;
+
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+    color:#444;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
+}
+ */
+
+
+/* Custom CSS
+ * --------------------------------------- */
+/*body{
+	font-family: arial,helvetica;
+	color: #333;
+	color: rgba(0,0,0,0.5);
+}
+.wrap{
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	position: relative;
+}
+html {    font-size: calc(100vw / 30);}
+
+h1{
+	font-size: 6em;
+}
+p{
+	font-size: 2em;
+}
+.intro p{
+	width: 50%;
+	margin: 0 auto;
+	font-size: 1.5em;
+}
+.section{
+	text-align:center;
+}
+	*/
