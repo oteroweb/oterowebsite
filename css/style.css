@@ -17,6 +17,7 @@ img{max-width: 100%;}
 		#оur-features{background-color: #fff;text-align: center;}
 		.title{font: bold 2.5rem 'Open Sans', sans-serif;margin-bottom: 15px;}
         .feature h2{font: normal 1.3rem 'Open Sans', sans-serif;	margin-bottom: 40px;}
+        #section1 > div{flex-direction: column;}
     }
     /* Extra Small Devices, Phones */ 
     @media only screen and (min-width : 480px) {

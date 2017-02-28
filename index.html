@@ -11,10 +11,6 @@
 <link rel="stylesheet" href="css/hover-min.css">
 <!-- <link rel="stylesheet" href="css/style.css"> -->
 
-
-
-
-
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="css/examples.css" />
 	<!--[if IE]>
@@ -31,20 +27,16 @@
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
 			  sectionsColor: ['', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-			  anchors: ['HomePage', 'StaffPage', 'ProductPage', 'ServicePage', 'ContactPage'],
+			  anchors: ['homePage', 'staffPage', 'productPage', 'servicePage', 'contactPage'],
 			  menu: '#menu',
 			  continuousVertical: true,
 				scrollingSpeed: 1700,
 easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)',
-	// responsiveHeight: 600,
-				// afterResponsive: function(isResponsive){				}
-
+                autoScrolling: false
+	// responsiveHeight: 600, afterResponsive: function(isResponsive){				}
 			});
 		});
 	</script>
-
-
-
 </head>
 <body>
 <header id="header">
@@ -55,17 +47,11 @@ easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)',
 			<a href="#" class="btn-menu" id="btn-menu" aria-hidden="true"> <i class="fa fa-bars icono" id="btn-menu"></i></a>
 		<nav class="menu" id="enlaces"> 
 		<ul id="menu">	
-		<li data-menuanchor="HomePage" class="active"><a class="hvr-shutter-out-horizontal" href="#HomePage"> <i class=" fa  fa-home" aria-hidden="true"></i> Inicio</a></li>
-		<li data-menuanchor="StaffPage" class="active"><a class="hvr-shutter-out-horizontal" href="#StaffPage"> <i class=" fa  fa-pencil" aria-hidden="true"></i> Equipo</a></li>
-		<li data-menuanchor="ProductPage" class="active"><a class="hvr-shutter-out-horizontal" href="#ProductPage">  <i class="fa  fa-briefcase" aria-hidden="true"></i>Productos</a></li>
-		<li data-menuanchor="ServicePage" class="active"><a class="hvr-shutter-out-horizontal" href="#ServicePage"> <i class="fa  fa-truck" aria-hidden="true"></i>Servicios</a></li>
-		<li data-menuanchor="ContactPage" class="active"><a class="hvr-shutter-out-horizontal" href="#ContactPage">  <i class="fa  fa-send" aria-hidden="true"></i>Contacto</a></li>
-
-			<!-- <li>	<a href="#" class= "hvr-shutter-out-horizontal"> <i class=" fa  fa-pencil" aria-hidden="true"></i> SERVICIOS</a></li>
-			<li>	<a href="#" class= "hvr-shutter-out-horizontal">	  <i class="fa fa-2x fa-briefcase" aria-hidden="true"></i> EQUIPO</a></li>
-			 <li>	<a href="#" class= "hvr-shutter-out-horizontal" > <i class="fa fa-2x fa-truck" aria-hidden="true"></i> PRODUCTOS</a></li>
-			<li>	<a href="#" class= "hvr-shutter-out-horizontal">  <i class="fa fa-2x fa-send" aria-hidden="true"></i> CONTACTO</a></li>
-			 -->
+		<li data-menuanchor="homePage" class="active"><a class="hvr-shutter-out-horizontal" href="#HomePage"> <i class=" fa  fa-home" aria-hidden="true"></i> Inicio</a></li>
+		<li data-menuanchor="staffPage"><a class="hvr-shutter-out-horizontal" href="#StaffPage"> <i class=" fa  fa-pencil" aria-hidden="true"></i> Equipo</a></li>
+		<li data-menuanchor="productPage"><a class="hvr-shutter-out-horizontal" href="#ProductPage">  <i class="fa  fa-briefcase" aria-hidden="true"></i>Productos</a></li>
+		<li data-menuanchor="servicePage"><a class="hvr-shutter-out-horizontal" href="#ServicePage"> <i class="fa  fa-truck" aria-hidden="true"></i>Servicios</a></li>
+		<li data-menuanchor="contactPage"><a class="hvr-shutter-out-horizontal" href="#ContactPage">  <i class="fa  fa-send" aria-hidden="true"></i>Contacto</a></li>
 		</ul>
 		</nav>
 	</header>
@@ -82,15 +68,21 @@ easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)',
 			<a>contactanos</a>
 		</div>
 	</div>
-	<div class="section" id="section1">
-	    <div class="slide" id="slide1"><h1>Slide Backgrounds</h1></div>
-	    <div class="slide" id="slide2"><h1>Totally customizable</h1></div>
+	<div class="section fp-auto-height" id="section1">
+			<h1>Equipo</h1>
+		<div class="perfil1">
+			<img src="img/oteroweblogotipo.svg" alt=""><p>Go to the first section and scroll up or to the last one and scroll down to see how it works.</p>
+		</div>
+		<div class="perfil1">
+			<img src="img/oteroweblogotipo.svg" alt=""><p>Go to the first section and scroll up or to the last one and scroll down to see how it works.</p>
+		</div>
+		<div class="perfil1">
+			<img src="img/oteroweblogotipo.svg" alt=""><p>Go to the first section and scroll up or to the last one and scroll down to see how it works.</p>
+		</div>
 	</div>
 	<div class="section" id="section2">
-		<div class="intro">
-			<h1>Product</h1>
-			<p>Go to the first section and scroll up or to the last one and scroll down to see how it works.</p>
-		</div>
+	    <div class="slide" id="slide1"><h1>Slide Backgrounds</h1></div>
+	    <div class="slide" id="slide2"><h1>Totally customizable</h1></div>
 	</div>
 	<div class="section" id="section3">
 		<div class="intro">
