@@ -1,0 +1,55 @@
+
+.row { box-sizing: border-box; display: flex; -webkit-box-flex: 0; flex: 0 1 auto; -webkit-box-orient: horizontal; -webkit-box-direction: normal; flex-flow: row wrap; margin-right: -1rem; margin-left: -1rem; }
+.fa { display: inline-block; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; line-height: 1; font-family: FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; }
+.fa-home::before { content: ""; }
+.fa-pencil::before { content: ""; }
+.fa-briefcase::before { content: ""; }
+.fa-navicon::before, .fa-reorder::before, .fa-bars::before { content: ""; }
+.fa-truck::before { content: ""; }
+.fa-send::before, .fa-paper-plane::before { content: ""; }
+html.fp-enabled, .fp-enabled body { margin: 0px; padding: 0px; overflow: hidden; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+.fp-section { position: relative; box-sizing: border-box; }
+.fp-section.fp-table, .fp-slide.fp-table { display: table; table-layout: fixed; width: 100%; }
+.fp-tableCell { display: table-cell; vertical-align: middle; width: 100%; height: 100%; }
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span { height: 12px; width: 12px; margin: -6px 0px 0px -6px; border-radius: 100%; }
+#fp-nav ul li:hover .fp-tooltip, #fp-nav.fp-show-active a.active + .fp-tooltip { transition: opacity 0.2s ease-in; width: auto; opacity: 1; }
+.fp-auto-height.fp-section, .fp-auto-height .fp-slide, .fp-auto-height .fp-tableCell { height: auto !important; }
+.fp-responsive .fp-auto-height-responsive.fp-section, .fp-responsive .fp-auto-height-responsive .fp-slide, .fp-responsive .fp-auto-height-responsive .fp-tableCell { height: auto !important; }
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { padding: 0px; margin: 0px; }
+a { text-decoration: none; }
+table { border-spacing: 0px; }
+fieldset, img { border: 0px; }
+address, caption, cite, code, dfn, em, strong, th, var { font-weight: normal; font-style: normal; }
+strong { font-weight: bold; }
+ol, ul { list-style: none; margin: 0px; padding: 0px; }
+caption, th { text-align: left; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; font-size: 100%; margin: 0px; padding: 0px; color: rgb(68, 68, 68); }
+q::before, q::after { content: ""; }
+abbr, acronym { border: 0px; }
+body { font-family: arial, helvetica; color: rgba(0, 0, 0, 0.498039); }
+h1 { font-size: 6em; }
+p { font-size: 2em; }
+.section { text-align: center; }
+.hvr-shutter-out-horizontal { background: rgba(32, 152, 209, 0.258824); flex-direction: column; padding: 0.1rem 0.8rem; border-radius: 30px; }
+.hvr-shutter-out-horizontal::before { background: rgba(75, 43, 106, 0.258824); border-radius: 6.5px; }
+#menu li { display: inline-block; margin: 10px; color: rgb(0, 0, 0); background: rgba(75, 43, 106, 0.901961); border-radius: 10px; font-size: 0.45rem; }
+#menu li:hover { background: none; }
+#menu li.active { background: rgba(76, 43, 106, 0.941176); }
+#menu li a { text-decoration: none; color: rgb(0, 0, 0); margin: 0.2rem; }
+#menu li.active a:hover { }
+#menu li:hover { }
+#menu li a, #menu li.active a { display: block; }
+#menu li a:hover { }
+#menu li.active a { }
+#header { position: fixed; top: 0px; left: 0px; height: 10vh; z-index: 70; width: 100%; padding: 0px; margin: 0px; justify-content: space-between; }
+html { font-size: calc(3.33333vw); }
+div, img, a, header { display: flex; flex-direction: column; }
+.logoimg { max-width: 32%; height: auto; }
+.logotext { max-width: 70%; height: auto; }
+nav { display: flex; justify-content: flex-end; }
+.hvr-shutter-out-horizontal { display: inline-block; vertical-align: middle; transform: perspective(1px) translateZ(0px); box-shadow: transparent 0px 0px 1px; position: relative; background: rgb(225, 225, 225); transition-property: color; transition-duration: 0.3s; }
+.hvr-shutter-out-horizontal::before { content: ""; position: absolute; z-index: -1; top: 0px; bottom: 0px; left: 0px; right: 0px; background: rgb(32, 152, 209); transform: scaleX(0); transform-origin: 50% center 0px; transition-property: transform; transition-duration: 0.3s; transition-timing-function: ease-out; }
+.hvr-shutter-out-horizontal:active, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:hover { color: rgb(255, 255, 255); }
+.hvr-shutter-out-horizontal:active::before, .hvr-shutter-out-horizontal:focus::before, .hvr-shutter-out-horizontal:hover::before { transform: scaleX(1); }
+h1 { font-size: 5em; font-family: arial, helvetica; color: rgb(255, 255, 255); margin: 0px; }
+.section { text-align: center; }

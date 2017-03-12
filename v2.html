@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Normal scrolling - fullPage.js</title>
+    <meta name="author" content="Jose Otero" />
+    <meta name="description" content="fullPage full-screen normal scrolling with autoScrolling." />
+    <meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,normal scroll,autoscrolling, scroll" />
+    <meta name="Resource-type" content="Document" />
+<link rel="stylesheet" href="css/flexboxgrid.min.css">
+
+<link rel="stylesheet" href="css/font-awesome.min.css">
+
+     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="css/v2.css" />
+<link rel="stylesheet" href="css/twemoji-awesome.css">
+<link rel="stylesheet" href="css/hover-min.css">
+
+    <style>
+
+    /* Style for our header texts
+    * --------------------------------------- */
+    h1{
+        font-size: 5em;
+        font-family: arial,helvetica;
+        color: #fff;
+        margin:0;
+    }
+    .intro p{
+        color: #fff;
+    }
+
+    /* Centered texts in each section
+    * --------------------------------------- */
+    .section{
+        text-align:center;
+    }
+
+
+    /* Bottom menu
+    * --------------------------------------- */
+    #infoMenu li a {
+        color: #fff;
+    }
+    </style>
+
+    <!--[if IE]>
+        <script type="text/javascript">
+             var console = { log: function() {} };
+        </script>
+    <![endif]-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="js/scrolloverflow.min.js"></script>
+
+  <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                menu: '#header',
+        anchors: ['homePage', 'staffPage', 'productPage', 'servicePage', 'contactPage'],
+                sectionsColor: ['RED', 'BLUE', '#7E8F7C','green','yellow'],
+                autoScrolling: false,
+
+            });
+        });
+
+    </script>
+
+</head>
+<body>
+<header id="header" class="row">
+    <div class="logo col row "> 
+            <img class="logoimg row" src="img/oteroweblogotipo.svg" alt="">
+            <img class="logotext row" src="img/oterowebtext.svg" alt="">
+    </div>
+   
+    <a href="#" class="btn-menu" id="btn-menu" aria-hidden="true"> <i class="fa fa-bars icono" id="btn-menu"></i></a>
+    <nav class="menu col-3" id="enlaces">
+
+      <ul id="menu">
+          <li class="hvr-shutter-out-horizontal active" data-menuanchor="homePage" >
+            <a href="#homePage"> 
+            <i class=" fa  fa-home" aria-hidden="true"></i> Inicio
+          </a>
+          </li>
+          <li class="hvr-shutter-out-horizontal" data-menuanchor="staffPage">
+            <a href="#staffPage"> 
+            <i class=" fa  fa-pencil" aria-hidden="true"></i> Equipo
+            </a>
+          </li>
+          <li class="hvr-shutter-out-horizontal" data-menuanchor="productPage"><a href="#productPage">  <i class="fa  fa-briefcase" aria-hidden="true"></i>Productos</a></li>
+          <li class="hvr-shutter-out-horizontal" data-menuanchor="servicePage"><a href="#servicePage"> <i class="fa  fa-truck" aria-hidden="true"></i>Servicios</a></li>
+          <li class="hvr-shutter-out-horizontal" data-menuanchor="contactPage"><a href="#contactPage">  <i class="fa  fa-send" aria-hidden="true"></i>Contacto</a></li>
+      </ul>
+    </nav> 
+  </header>
+       <div class="homepage-hero-module">
+        <div class="video-container">
+            <div class="filter"></div>
+            <video autoplay loop class="fillWidth">
+                <source src="video/MP4/Spacious.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                <source src="video/WEBM/Spacious.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+            </video>
+            <div class="poster hidden">
+                <!-- <img src="video/Snapshots/Spacious.jpg" alt=""> -->
+            </div>
+        </div>
+        </div> 
+<div id="fullpage">
+   
+
+    <div class="section " id="section0">
+           
+    </div>
+    <div class="section" id="section1">    </div>
+    <div class="section" id="section2">    </div>
+    <div class="section" id="section3">    </div>
+    <div class="section" id="section4">    </div>
+</div>
+
+<script src="js/headroom.min.js"></script>
+<script src="js/menu.js"></script>
+
+
+<script>
+    //jQuery is required to run this code
+$( document ).ready(function() {
+
+    scaleVideoContainer();
+
+    initBannerVideoSize('.video-container .poster img');
+    initBannerVideoSize('.video-container .filter');
+    initBannerVideoSize('.video-container video');
+
+    $(window).on('resize', function() {
+        scaleVideoContainer();
+        scaleBannerVideoSize('.video-container .poster img');
+        scaleBannerVideoSize('.video-container .filter');
+        scaleBannerVideoSize('.video-container video');
+    });
+
+});
+
+function scaleVideoContainer() {
+
+    var height = $(window).height() + 5;
+    var unitHeight = parseInt(height) + 'px';
+    $('.homepage-hero-module').css('height',unitHeight);
+
+}
+
+function initBannerVideoSize(element){
+
+    $(element).each(function(){
+        $(this).data('height', $(this).height());
+        $(this).data('width', $(this).width());
+    });
+
+    scaleBannerVideoSize(element);
+
+}
+
+function scaleBannerVideoSize(element){
+
+    var windowWidth = $(window).width(),
+    windowHeight = $(window).height() + 5,
+    videoWidth,
+    videoHeight;
+
+    // console.log(windowHeight);
+
+    $(element).each(function(){
+        var videoAspectRatio = $(this).data('height')/$(this).data('width');
+
+        $(this).width(windowWidth);
+
+        if(windowWidth < 1000){
+            videoHeight = windowHeight;
+            videoWidth = videoHeight / videoAspectRatio;
+            $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
+
+            $(this).width(videoWidth).height(videoHeight);
+        }
+
+        $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+
+    });
+}
+</script>
+</body>
+</html>
