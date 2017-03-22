@@ -1,0 +1,113 @@
+
+html, body, .container {
+  height: 100%;
+}
+
+body {
+  background: #3b3f45;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1em;
+  font-family: 'Raleway', Arial, sans-serif;
+  overflow: hidden;
+  overflow-y: scroll;
+  min-height: 590px;
+}
+
+a {
+  color: rgba(0,0,0,0.3);
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover, a:focus {
+  color: #fff;
+}
+
+.zone { display:flex; justify-content: center; align-items: center; height: 100vh;}
+#thanks{justify-content: center; align-items: center; }
+
+
+/* los keyframes determinan los multiples estados de principio a fin de la animacion */
+/* Para quien se atreva a ello, puede probar ejemplos con la web http://cssanimate.com/ , pero requiere modificación de código*/
+
+@-webkit-keyframes fadeIn { 0% { opacity:0; } 100% { opacity:1; } } /* -webkit-: Chrome y Safari*/ 
+@-moz-keyframes fadeIn { 0% { opacity:0; } 100% { opacity:1; } } /* -moz-: Versiones antiguas de Firefox */
+@-o-keyframes fadeIn { 0% { opacity:0; } 100% { opacity:1; } } /* -o-: Versiones antiguas de Opera */
+@-ms-keyframes fadeIn { 0% { opacity:0; } 100% { opacity:1; } } /* ms: Versiones antiguas de Internet Explorer */
+@keyframes fadeIn { 0% { opacity:0; } 100% { opacity:1; } }  /* Estandar W3C */
+
+/* Una manera alternativa de escribirlo es "{ from {opacity:0;} to {opacity:1;} }"*/
+
+.fade-in {
+  opacity:0;  /* Sin visibilidad al empezar */
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  -o-animation:fadeIn ease-in 1;
+  -ms-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+  /* fadeIn es un identificador de keyframe inventado; ease-in determina el tipo de velocidad de la transición ( http://www.devildrey33.es/Doc/CSS/Propiedades/transition-timing-function ); el 1 determina el número de veces que se reproduce la animación */
+
+  -webkit-animation-fill-mode:forwards;  /* esta propiedad hace que la animación se quede en el último frame*/
+  -moz-animation-fill-mode:forwards;
+  -o-animation-fill-mode:forwards;
+  -ms-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+
+/* Duración de las animaciones */
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  -o-animation-duration:1s;
+  -ms-animation-duration:1s;
+  animation-duration:1s;
+}
+
+/* A partir de aquí, establecer cuando aparecerán las animaciónes*/
+ 
+.fade-in.clase1 {
+  -webkit-animation-delay: 1.6s;
+  -moz-animation-delay: 1.6s;
+  -o-animation-delay: 1.6s;
+  -ms-animation-delay: 1.6s;
+  animation-delay: 1.6s;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.fs-radio-group.fs-radio-custom.fs-anim-lower{
+      display: flex;
+    justify-content: space-around;
+}
+label{font-size:  1rem;}
+.formContact{
+  min-height: 100vh;
+}
+
+ol > li {
+
+}
+.fs-form{
+      display: flex;
+    /* flex-direction: column; */
+    font-size: 1rem;
+    min-height: 100vh;
+}
+
+.fs-form > ol > li > input{
+    font-size: 1rem;
+}
+
+.fs-controls{
+  position: relative;
+}

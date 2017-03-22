@@ -1,102 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Normal scrolling - fullPage.js</title>
+    <meta name="author" content="Jose Otero" />
+    <meta name="description" content="fullPage full-screen normal scrolling with autoScrolling." />
+    <meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,normal scroll,autoscrolling, scroll" />
+    <meta name="Resource-type" content="Document" />
+        <!-- <meta name="description" content="Fullscreen Form Interface: A distraction-free form concept with fancy animations" />
+        <meta name="keywords" content="fullscreen form, css animations, distraction-free, web design" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico">
+        -->
+        <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/component.css" />
+        <script src="js/modernizr.custom.js"></script>
+
+        <link rel="stylesheet" href="css/font-awesome.min.css">
 <link rel="stylesheet" href="css/twemoji-awesome.css">
 <link rel="stylesheet" href="css/hover-min.css">
+<link rel="stylesheet" href="css/flexboxgrid.min.css">
+    <link rel="stylesheet" type="text/css" href="css/v2.css" />
 
-	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
-	<link rel="stylesheet" type="text/css" href="css/examples.css" />
-	<!--[if IE]>
-		<script type="text/javascript">
-			 var console = { log: function() {} };
-		</script>
-	<![endif]-->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="js/scrolloverflow.min.js"></script>
-	<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
-	<!-- <script type="text/javascript" src="js/examples.js"></script> -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-			  sectionsColor: ['', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-			  anchors: ['homePage', 'staffPage', 'productPage', 'servicePage', 'contactPage'],
-			  menu: '#menu',
-			  continuousVertical: true,
-				scrollingSpeed: 1700,
-easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)',
-                autoScrolling: false	
-	// responsiveHeight: 600, afterResponsive: function(isResponsive){				}
-			});
-		});
-	</script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+                $("#menu").scrollspy({ offset: -20.5, animate:true});
+        });
+    </script>
+
+
+
+
 </head>
 <body>
-<header id="header">
-		<div class="logo">
-			<img src="img/oteroweblogotipo.svg" alt="">
-			<img src="img/oterowebtext.svg" alt="">
-		</div>
-			<a href="#" class="btn-menu" id="btn-menu" aria-hidden="true"> <i class="fa fa-bars icono" id="btn-menu"></i></a>
-		<nav class="menu" id="enlaces"> 
-		<ul id="menu">	
-		<li data-menuanchor="homePage" class="active"><a class="hvr-shutter-out-horizontal" href="#HomePage"> <i class=" fa  fa-home" aria-hidden="true"></i> Inicio</a></li>
-		<li data-menuanchor="staffPage"><a class="hvr-shutter-out-horizontal" href="#StaffPage"> <i class=" fa  fa-pencil" aria-hidden="true"></i> Equipo</a></li>
-		<li data-menuanchor="productPage"><a class="hvr-shutter-out-horizontal" href="#ProductPage">  <i class="fa  fa-briefcase" aria-hidden="true"></i>Productos</a></li>
-		<li data-menuanchor="servicePage"><a class="hvr-shutter-out-horizontal" href="#ServicePage"> <i class="fa  fa-truck" aria-hidden="true"></i>Servicios</a></li>
-		<li data-menuanchor="contactPage"><a class="hvr-shutter-out-horizontal" href="#ContactPage">  <i class="fa  fa-send" aria-hidden="true"></i>Contacto</a></li>
-		</ul>
-		</nav>
-	</header>
+<header id="header" class="row">
+    <div class="col-xs-3 "> 
+    <div class="row logo">
+        
+        <div class="col-xs-4 logoBG">l</div>
+        <div class="col-xs-8 texto">l</div>
+    </div>
+            <!-- <img class="logoimg col-xs-4" src="img/oteroweblogotipo.svg" alt=""> -->
+            <!-- <img class="logotext col-xs-8" src="img/oterowebtext.svg" alt=""> -->
+    </div>
+   
+    <a href="#" class="btn-menu col-xs-1 none" id="btn-menu" aria-hidden="true"> <i class="fa fa-bars icono" id="btn-menu"></i></a>
+    <nav class="menu col-xs-9" id="enlaces">
 
-<div id="fullpage">
-	<div class="section" id="section0">
-		<video id="myVideo" loop muted data-autoplay>
-			<source src="imgs/flowers.mp4" type="video/mp4">
-			<source src="imgs/flowers.webm" type="video/webm">
-		</video>
-		<div class="layer">
-			<h1>BIENVENIDOS A OTEROWEB</h1>
-			<h2>Software y Marketing</h2>
-			<a>contactanos</a>
-		</div>
-	</div>
-	<div class="section fp-auto-height" id="section1">
-			<h1>Equipo</h1>
-		<div class="perfil1">
-			<img src="img/oteroweblogotipo.svg" alt=""><p>Go to the first section and scroll up or to the last one and scroll down to see how it works.</p>
-		</div>
-		<div class="perfil1">
-			<img src="img/oteroweblogotipo.svg" alt=""><p>Go to the first section and scroll up or to the last one and scroll down to see how it works.</p>
-		</div>
-		<div class="perfil1">
-			<img src="img/oteroweblogotipo.svg" alt=""><p>Go to the first section and scroll up or to the last one and scroll down to see how it works.</p>
-		</div>
-	</div>
-	<div class="section" id="section2">
-	    <div class="slide" id="slide1"><h1>Slide Backgrounds</h1></div>
-	    <div class="slide" id="slide2"><h1>Totally customizable</h1></div>
-	</div>
-	<div class="section" id="section3">
-		<div class="intro">
-			<h1>Service</h1>
-			<p>And it will animate down to the first section</p>
-		</div>
-	</div>
-	<div class="section" id="section3">
-		<div class="intro">
-			<h1>Contact</h1>
-			<p>And it will animate down to the first section</p>
-		</div>
-	</div>
-</div>
+      <ul id="menu">
+          <li class="hvr-shutter-out-horizontal active" data-menuanchor="homePage" >
+            <a href="#homePage"> 
+            <i class=" fa  fa-home" aria-hidden="true"></i> Inicio
+          </a>
+          </li>
+          <li class="hvr-shutter-out-horizontal" data-menuanchor="staffPage">
+            <a href="#staffPage"> 
+            <i class=" fa  fa-pencil" aria-hidden="true"></i> Equipo
+            </a>
+          </li>
+          <li class="hvr-shutter-out-horizontal" data-menuanchor="servicePage"><a href="#servicePage"> <i class="fa  fa-truck" aria-hidden="true"></i>Servicios</a></li>
+          <!-- <li class="hvr-shutter-out-horizontal" data-menuanchor="productPage"><a href="#productPage">  <i class="fa  fa-briefcase" aria-hidden="true"></i>Productos</a></li> -->
+          <li class="hvr-shutter-out-horizontal" data-menuanchor="contactPage"><a href="#contactPage">  <i class="fa  fa-send" aria-hidden="true"></i>Contacto</a></li>
+      </ul>
+    </nav> 
+  </header>
+   <section id="homePage"> 
+            <video id="myVideo" loop muted autoplay>
+            <!-- <source src="video/MP4/Spacious.mp4" type="video/mp4"> -->
+            <!-- <source src="video/WEBM/Spacious.webm" type="video/webm"> -->
+        </video>
+        <!-- <div class="filter"></div> -->
+        <div class="content">
+            <div class="layer">
+                <!-- <img src="video/Snapshots/Spacious.jpg" alt=""> -->
+                <h2>Bienvenidos a Oteroweb</h2>
+                <h3>Software A tu medida</h3>
+                <div class="row center-xs"><h3><a href="#contactPage">Contactanos</a></h3></div>
+            </div>    
+        </div>
+   </section>
+
+   <section class="section" id="staffPage">
+    <div class="content">
+        
+    <h2>Equipo OW</h2>
+    <h3>Somos La empresa de Software y Marketing que se adapta a ti</h3>
+        <div class="row">
+            <div class="col-xs-6 col-md-3 staff">
+                <div class="card"><img src="img/oteroweblogotipo.svg" alt=""></div> <h4>Marketing</h4>
+            </div>
+            <div class="col-xs-6 col-md-3 staff">
+                <div class="card"><img src="img/oteroweblogotipo.svg" alt=""></div> <h4>Marketing</h4>
+            </div>
+            <div class="col-xs-6 col-md-3 staff">
+                <div class="card"><img src="img/oteroweblogotipo.svg" alt=""></div> <h4>Marketing</h4>
+            </div>
+            <div class="col-xs-6 col-md-3 staff">
+                <div class="card"><img src="img/oteroweblogotipo.svg" alt=""></div> <h4>Marketing</h4>
+            </div>
+        </div>
+    </div>  
+    </section>
+    <section id="servicePage">
+        <div class="content">
+            <h2>¿En qué te Podemos Servir?</h2>
+            <div class="row">
+            <div class="servicecard col-xs-6 col-sm-4 col-md-3 "><div class="flip-container" ontouch="this.classList.toggle('hover');"> <div class="flipper"> <div class="front"> <i class="twa twa-3x twa-computer"></i><h4 class="service-title"> Aplicaciones escritorio</h4></div> <div class="back"> <p class="service-detail">Aplicaciones Multiplataforma para MacOs, Linux y Windows.</p> </div> </div> </div> </div>
+            <div class="servicecard col-xs-6 col-sm-4 col-md-3 "><div class="flip-container" ontouch="this.classList.toggle('hover');"> <div class="flipper"> <div class="front"> <i class="twa twa-3x twa-iphone"></i><h4 class="service-title"> Aplicaciones moviles</h4></div> <div class="back"> <p class="service-detail">Aplicaciones intuitivas y atractivas para iOS y Android.</p> </div> </div> </div> </div>
+            <div class="servicecard col-xs-6 col-sm-4 col-md-3 "><div class="flip-container" ontouch="this.classList.toggle('hover');"> <div class="flipper"> <div class="front"> <i class="twa twa-3x twa-bar-chart"></i><h4 class="service-title">Pruebas de control de calidad de software</h4></div> <div class="back"> <p class="service-detail">Tienes problemas de seguridad te auditamos, reparamos los errores y ponemos tu web a volar.</p> </div> </div> </div> </div>
+            <div class="servicecard col-xs-6 col-sm-4 col-md-3 "><div class="flip-container" ontouch="this.classList.toggle('hover');"> <div class="flipper"> <div class="front"> <i class="twa twa-3x twa-dart"></i><h4 class="service-title">Rescate de Proyectos</h4></div> <div class="back"> <p class="service-detail">En Oteroweb Te ayudamos a encaminar y poner en marcha tu proyecto para ponerlo a producir en tiempo Record</p> </div> </div> </div> </div>
+            <div class="servicecard col-xs-6 col-sm-4 col-md-3 "><div class="flip-container" ontouch="this.classList.toggle('hover');"> <div class="flipper"> <div class="front"> <i class="twa twa-3x twa-rocket"></i><h4 class="service-title">Diseño UI UX</h4></div> <div class="back"> <p class="service-detail">Nos mantenemos actualizados con las ultimas tendencias de Experiencia de usuario e Interfaces de Usuario para hacer que tu web tenga el impacto que deseas.</p> </div> </div> </div> </div>
+            <div class="servicecard col-xs-6 col-sm-4 col-md-3 "><div class="flip-container" ontouch="this.classList.toggle('hover');"> <div class="flipper"> <div class="front"> <i class="twa twa-3x twa-art"></i><h4 class="service-title">De imagen a Web </h4></div> <div class="back"> <p class="service-detail">Creaste una imagen de como quieres que se vea tu web, o la de tus clientes en Oteroweb te la maquetamos a medida y en tiempo record.</p> </div> </div> </div> </div>
+            <div class="servicecard col-xs-6 col-sm-4 col-md-3 "><div class="flip-container" ontouch="this.classList.toggle('hover');"> <div class="flipper"> <div class="front"> <i class="twa twa-3x twa-books"></i><h4 class="service-title">Marketing Digital</h4></div> <div class="back"> <p class="service-detail"> Hacemos un estudio, Con personal calificado para encontrar tu identidad y aumentar tu volumen de ventas </p> </div> </div> </div> </div>
+            <div class="servicecard col-xs-6 col-sm-4 col-md-3 "><div class="flip-container" ontouch="this.classList.toggle('hover');"> <div class="flipper"> <div class="front"> <i class="twa twa-3x twa-pushpin"></i><h4 class="service-title">SEO y SEM </h4></div> <div class="back"> <p class="service-detail">Posiciona tu marca en buscadores has subir tus visitas y mejorar tu contenido     </p> </div> </div> </div> </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- <section id="productPage">  </section> -->
+    <section id="contactPage">
+        <div class="content">
+            <!-- <h2>Contactenos</h2> -->
+                <div id="thanks" class="fade-in" style="display:none;"> <h2>gracias por Comunicarte con nosotros</h2></div>
+            <div class="formContact">
+             <div class="fs-form-wrap" id="fs-form-wrap"> 
+                <form id="myform" class="fs-form fs-form-full" autocomplete="off">
+                    <ol class="fs-fields" >
+                        <li>
+                            <label class="fs-field-label fs-anim-upper" for="q1">Nombre O Razon Social</label>
+                            <input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Oteroweb" required autofocus/>
+                        </li>
+                         <li>
+                            <label class="fs-field-label fs-anim-upper" for="q2" data-info="We won't send you spam, we promise...">¿Su Correo Electronico?</label>
+                            <input pattern="[a-z]{1,15}" class="fs-anim-lower" id="q2" name="q2" type="email" placeholder="Info@oteroweb.com" required/>
+                        </li>
+                        <li data-input-trigger>
+                            <label class="fs-field-label fs-anim-upper" for="q3" data-info="This will help us know what kind of service you need">¿Cual es el Motivo de tu Contacto?</label>
+                            <div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+                                <span><input id="q3b" name="q3" type="radio" value="conversion"/><label for="q3b" class="radio-conversion">Presencia en internet</label></span>
+                                <span><input id="q3c" name="q3" type="radio" value="social"/><label for="q3c" class="radio-social">Asesoria</label></span>
+                                <span><input id="q3a" name="q3" type="radio" value="mobile"/><label for="q3a" class="radio-mobile">Desarrollo Movil</label></span>
+                            </div>
+                        </li>
+                        <li>
+                            <label class="fs-field-label fs-anim-upper" for="q4">¿Describe Brevemente Tu Requerimiento?</label>
+                            <textarea class="fs-anim-lower" id="q4" name="q4" placeholder="Describe here"></textarea>
+                        </li>
+                        <li>
+                            <label class="fs-field-label fs-anim-upper" for="q5">¿Su Numero de Contacto?</label>
+                            <input class="fs-anim-lower numeros" id="q5" name="q5" type="number" placeholder="0416-7528772"/>
+                        </li>
+                    </ol><!-- /fs-fields -->
+                    <button class="fs-submit" type="submit">Send answers</button>
+                </form><!-- /fs-form -->
+            </div><!-- /fs-form-wrap -->
+            </div>
+        </div>
+    </section>
+<footer>el footer</footer>
+
+
+<script src="js/scrollspy.min.js"></script>
 <script src="js/headroom.min.js"></script>
 <script src="js/menu.js"></script>
 
+        <script src="js/classie.js"></script>
+        <script src="js/fullscreenForm.js"></script>
+      <script>
+            (function() {
+                var formWrap = document.getElementById( 'fs-form-wrap' );
+                new FForm( formWrap, {
+                    onReview : function() {
+                        var name = document.getElementById("q1").value;
+                        var email =  document.getElementById("q2").value;
+                        var motivo = null; 
+                        var inputElements = document.getElementsByName('q3');
+                        for(var i=0; inputElements[i]; ++i){
+                        if(inputElements[i].checked){
+                        motivo = inputElements[i].value;
+                        break;
+                        }
+                        }
+                        var description =  document.getElementById("q4").value;
+                        var phone =  document.getElementById("q5").value;
+                        var form = [name,email,motivo,description,phone];
+                        document.getElementById("fs-form-wrap").className="hidden";
+                        document.getElementById("thanks").style.display="flex";
+                    }
+                } );
+            })();
+        </script>
+
+<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.18.8'><\/script>".replace("HOST", location.hostname));
+//]]>
+    
+</script>
 </body>
 </html>
