@@ -688,7 +688,7 @@ button.fs-continue:hover {
 
 /* Error message */
 .fs-message-error {
-	position: absolute;
+	/*position: absolute;*/
 	bottom: 75%;
 	left: 50%;
 	z-index: 800;

@@ -121,3 +121,25 @@ ol > li {
   width: 5vh;
   
 }
+
+#error{
+  justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#error > span {
+      display: flex;
+    position: relative;
+    justify-content: center;
+    min-width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+#continuar{
+  display: flex;
+    align-items: center;
+}
+#continuarmessage{
+    align-items: center;
+}
