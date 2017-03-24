@@ -111,16 +111,22 @@
 	 * create and insert the structure for the controls
 	 */
 	FForm.prototype._addControls = function() {
-		// main controls wrapper
+		// main controls wrapper´
+		console.log(this.el);
+		this.continuar = document.getElementById('continuar');
+		this.progreso = document.getElementById('progreso');
+		this.puntos = document.getElementById('puntos');
+		this.numeros = document.getElementById('numeros');
+		this.error = document.getElementById('error');
 		this.ctrls = createElement( 'div', { cName : 'fs-controls', appendTo : this.el } );
 
 		// continue button (jump to next field)
-		this.ctrlContinue = createElement( 'button', { cName : 'fs-continue', inner : 'Continue', appendTo : this.ctrls } );
+		this.ctrlContinue = createElement( 'button', { cName : 'fs-continue', inner : 'Continue', appendTo : this.continuar } );
 		this._showCtrl( this.ctrlContinue );
 
 		// navigation dots
 		if( this.options.ctrlNavDots ) {
-			this.ctrlNav = createElement( 'nav', { cName : 'fs-nav-dots', prependTo : this.ctrls } );
+			this.ctrlNav = createElement( 'nav', { cName : 'fs-nav-dots', appendTo : this.puntos } );
 			var dots = '';
 			for( var i = 0; i < this.fieldsCount; ++i ) {
 				dots += i === this.current ? '<button class="fs-dot-current"></button>' : '<button disabled></button>';
@@ -132,7 +138,7 @@
 
 		// field number status
 		if( this.options.ctrlNavPosition ) {
-			this.ctrlFldStatus = createElement( 'span', { cName : 'fs-numbers', appendTo : this.ctrls } );
+			this.ctrlFldStatus = createElement( 'span', { cName : 'fs-numbers', appendTo : this.numeros } );
 
 			// current field placeholder
 			this.ctrlFldStatusCurr = createElement( 'span', { cName : 'fs-number-current', inner : Number( this.current + 1 ) } );
@@ -146,7 +152,7 @@
 
 		// progress bar
 		if( this.options.ctrlProgress ) {
-			this.ctrlProgress = createElement( 'div', { cName : 'fs-progress', appendTo : this.ctrls } );
+			this.ctrlProgress = createElement( 'div', { cName : 'fs-progress', appendTo : this.progreso } );
 			this._showCtrl( this.ctrlProgress );
 		}
 	}
@@ -157,7 +163,7 @@
 	 */
 	FForm.prototype._addErrorMsg = function() {
 		// error message
-		this.msgError = createElement( 'span', { cName : 'fs-message-error', appendTo : this.el } );
+		this.msgError = createElement( 'span', { cName : 'fs-message-error', appendTo : this.error } );
 	}
 
 	/**

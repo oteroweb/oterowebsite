@@ -2,7 +2,7 @@
 .fs-form-wrap {
 	position: relative;
 	width: 100%;
-	height: 100%;
+	/*height: 100%;*/
 	color: #fff;
 }
 
@@ -114,7 +114,7 @@ button.fs-continue,
 	    display: flex;
     flex-direction: column;
     text-align: center;
-    min-height: 100vh;
+    /*min-height: 100vh;*/
     justify-content: center;
 }
 /*.fs-current{display: flex;}*/
@@ -525,7 +525,7 @@ button.fs-continue,
 
 /* Progress bar */
 .fs-progress {
-	position: absolute;
+	position: relative;
 	top: 0;
 	width: 0%;
 	height: 0.5em;
@@ -673,7 +673,7 @@ button.fs-continue:hover {
 }
 
 .fs-continue::after {
-	position: absolute;
+	/*position: absolute;*/
 	top: 100%;
 	left: 0;
 	width: 100%;
@@ -681,7 +681,7 @@ button.fs-continue:hover {
 	text-align: center;
 	background: transparent;
 	color: rgba(0,0,0,0.3);
-	content: 'or press ENTER';
+	/*content: ' o presiona la tecla Enter';*/
 	font-size: 0.65em;
 	pointer-events: none;
 }
