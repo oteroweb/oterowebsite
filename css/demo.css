@@ -88,6 +88,7 @@ input::-webkit-inner-spin-button {
 .fs-radio-group.fs-radio-custom.fs-anim-lower{
       display: flex;
     justify-content: space-around;
+    flex-direction:   row;
 }
 label{font-size:  1rem;}
 .formContact{
@@ -104,8 +105,35 @@ ol > li {
     /*min-height: 100vh;*/
 }
 
-.fs-form > ol > li > input{
-    font-size: 1rem;
+/*colores para el formulario*/
+.fs-form > ol > li > input{    font-size: 1rem;}
+.fs-form > ol > li > input::-webkit-input-placeholder { 
+    color: blue;
+    background: none;
+ }
+ .fs-form > ol > li > input:-moz-placeholder { 
+   color: blue;
+   background: none;
+ }
+
+.fs-form > ol > li > input::-moz-placeholder { 
+    color: blue;
+    background: none;
+ }
+
+.fs-form > ol > li > input:-ms-input-placeholder { 
+    color: blue;
+    background: none;
+ }
+
+ /*ccolores mientras escribo*/
+.fs-fields input:focus {
+    
+    background-color: white !important;
+    color:  black;
+    text-align:   center;
+    border-radius: 5.6%;
+    padding: 2vh;
 }
 
 .fs-controls{
@@ -113,13 +141,13 @@ ol > li {
 }
 #puntos{
   align-items: center;
-  margin-top:5vh;
+  margin-top:1vh;
 
 }
 #puntos > nav > button{
-  height: 5vh;
-  width: 5vh;
-  
+  height: 3vh;
+  width: 3vh;
+  background-color:   blue;
 }
 
 #error{
@@ -134,11 +162,14 @@ ol > li {
     min-width: 100%;
     align-items: center;
     text-align: center;
+    font-size: 0.5rem;
+    padding-bottom:  1rem;
 }
 
 #continuar{
   display: flex;
     align-items: center;
+  margin:   auto;
 }
 #continuarmessage{
     align-items: center;

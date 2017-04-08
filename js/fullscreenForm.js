@@ -121,7 +121,7 @@
 		this.ctrls = createElement( 'div', { cName : 'fs-controls', appendTo : this.el } );
 
 		// continue button (jump to next field)
-		this.ctrlContinue = createElement( 'button', { cName : 'fs-continue', inner : 'Continue', appendTo : this.continuar } );
+		this.ctrlContinue = createElement( 'button', { cName : 'fs-continue', inner : 'Siguiente o presione Enter', appendTo : this.continuar } );
 		this._showCtrl( this.ctrlContinue );
 
 		// navigation dots

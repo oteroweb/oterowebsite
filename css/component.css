@@ -193,8 +193,10 @@ button.fs-continue,
 .fs-fields > li label.fs-field-label {
 	display: inline-block;
 	padding: 0 5px 1em 0;
-	font-weight: 700;
+	font-weight: 900;
 	pointer-events: none;
+	color: black;
+	font-size: 	1rem;
 }
 
 .fs-form-full .fs-fields > li label[data-info]::after {
@@ -309,7 +311,7 @@ button.fs-continue,
 	position: relative;
 	margin-right: 3%;
 	padding: 10px;
-	max-width: 200px;
+	min-width: 30%;
 	width: 30%;
 	text-align: center;
 	font-weight: 700;
@@ -638,6 +640,11 @@ button.fs-continue,
 /* Continue button and submit button */
 button.fs-submit,
 button.fs-continue {
+	  background-color: white;
+    font-size: 1rem;
+    font-weight:  900;
+    border:  1vh solid black;
+    margin:auto;
 	/*padding: 0.6em 1.5em;
 	border: 3px solid #232529;
 	border-radius: 40px;
@@ -661,8 +668,8 @@ button.fs-continue {
 	/*position: absolute;*/
 	right: 0;
 	bottom: 0;
-	margin: 0 40px 60px 0;
-	font-size: 1.25em;
+	/*margin: 0 40px 60px 0;*/
+	font-size: 0.45rem;
 }
 
 button.fs-submit:hover,
@@ -681,7 +688,7 @@ button.fs-continue:hover {
 	text-align: center;
 	background: transparent;
 	color: rgba(0,0,0,0.3);
-	/*content: ' o presiona la tecla Enter';*/
+	/*content: "\ presiona la tecla Enter";*/
 	font-size: 0.65em;
 	pointer-events: none;
 }
